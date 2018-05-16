@@ -1,6 +1,3 @@
-[![Coverage Status](https://coveralls.io/repos/github/gcouti/qa/badge.svg?branch=master)](https://coveralls.io/github/gcouti/qa?branch=master)
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-
 # Question Answering Problem
 
 Experiments with several Neural Networks to solve question answering QA problem.
