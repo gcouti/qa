@@ -1,12 +1,10 @@
 from __future__ import print_function
 
-from keras.layers import Input, Embedding, LSTM, Reshape, concatenate, regularizers, Bidirectional, Conv1D, \
-    MaxPooling1D, Permute, Conv2D, MaxPooling2D, SimpleRNN
+from keras.layers import Input, Embedding, LSTM, Reshape, concatenate, Conv1D, \
+    MaxPooling1D
 from keras.layers.core import Dense, Dropout, Lambda
 from keras.models import Model
 from keras.optimizers import Adam
-from keras.backend import stack
-
 from pypagai.models.base import KerasModel
 
 
