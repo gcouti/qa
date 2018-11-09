@@ -100,7 +100,7 @@ class ConvQueryRN(KerasModel):
         question_encoded = Conv1D(int(EMBED_SIZE/2), kernel_size=(3, ), strides=(1, ), padding='valid', kernel_initializer='normal', activation='relu')(question_encoded)
         question_encoded = MaxPooling1D(strides=(1, ))(question_encoded)
 
-        question_encoded = Reshape((int(EMBED_SIZE/2), ))(question_encoded)
+        question_encoded = Reshape((int(question_encoded.shape[1]) * int(question_encoded.shape[2]), ))(question_encoded)
 
         relations = []
         for fact_object_1 in objects:
@@ -231,7 +231,7 @@ class ConvInputsRN(KerasModel):
         question_encoded = Conv1D(int(CONV_UNITS/2), kernel_size=(3, ), strides=(1, ), padding='valid', kernel_initializer='normal', activation='relu')(question_encoded)
         question_encoded = MaxPooling1D(strides=(1, ))(question_encoded)
 
-        question_encoded = Reshape((int(CONV_UNITS/2), ))(question_encoded)
+        question_encoded = Reshape((int(question_encoded.shape[1]) * int(question_encoded.shape[2]), ))(question_encoded)
 
         relations = []
         for fact_object_1 in objects:
