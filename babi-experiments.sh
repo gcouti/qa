@@ -1,28 +1,26 @@
 #!/usr/bin/env bash
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib64/;
 
-# export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib64/;python -m experiment.qa_experiment with model_default_cfg.model=qa.models.model_rn.RNNoLSTM model_default_cfg.verbose=True dataset_default_cfg.strip_sentences=True model_cfg.batch_size=1024 dataset_cfg.task=1
-
 SCRIPT=".env/bin/python -m experiment.qa_experiment" 
 COMMON_PARAMETERS="model_default_cfg.verbose=True model_cfg.batch_size=512 model_cfg.epochs=500 dataset_default_cfg.reader=babi"
 TASKS=(
-#  "model_default_cfg.model=pypagai.models.model_n2nmemory.N2NMemory"
+  "model_default_cfg.model=pypagai.models.model_n2nmemory.N2NMemory"
   "model_default_cfg.model=qa.models.model_rn.ConvInputsRN dataset_default_cfg.strip_sentences=True dataset_cfg.only_supporting=True"
   "model_default_cfg.model=qa.models.model_rn.ConvRN dataset_default_cfg.strip_sentences=True dataset_cfg.only_supporting=True"
   "model_default_cfg.model=qa.models.model_rn.ConvStoryRN dataset_cfg.only_supporting=True  dataset_default_cfg.strip_sentences=True"
   "model_default_cfg.model=qa.models.model_rn.ConvQueryRN dataset_cfg.only_supporting=True dataset_default_cfg.strip_sentences=True"
-#  "model_default_cfg.model=pypagai.models.model_rn.RN dataset_cfg.only_supporting=True dataset_default_cfg.strip_sentences=True"
-#  "model_default_cfg.model=pypagai.models.model_encoder.EncoderModel"
-#  "model_default_cfg.model=pypagai.models.model_lstm.SimpleLSTM"
-#  "model_default_cfg.model=pypagai.models.model_lstm.EmbedLSTM"
+  "model_default_cfg.model=pypagai.models.model_rn.RN dataset_cfg.only_supporting=True dataset_default_cfg.strip_sentences=True"
+  "model_default_cfg.model=pypagai.models.model_encoder.EncoderModel"
+  "model_default_cfg.model=pypagai.models.model_lstm.SimpleLSTM"
+  "model_default_cfg.model=pypagai.models.model_lstm.EmbedLSTM"
   "model_default_cfg.model=pypagai.models.model_lstm.ConvLSTM model_cfg.batch_size=32"
-#  "model_default_cfg.model=pypagai.models.model_rnn.RNNModel"
+  "model_default_cfg.model=pypagai.models.model_rnn.RNNModel"
 
-# Fix-it
-#  "model_default_cfg.model=pypagai.models.model_dmn.DMN"
+  # Fix-it
+  # "model_default_cfg.model=pypagai.models.model_dmn.DMN"
 
-# Memory problem
-#  "model_default_cfg.model=qa.models.model_rn.RNNoLSTM dataset_default_cfg.strip_sentences=True dataset_cfg.only_supporting=True"
+  # Memory problem
+  # "model_default_cfg.model=qa.models.model_rn.RNNoLSTM dataset_default_cfg.strip_sentences=True dataset_cfg.only_supporting=True"
 )
 
 
