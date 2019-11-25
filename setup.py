@@ -7,6 +7,9 @@ if sys.version_info < (3,):
 with open('README.md', encoding="utf8") as f:
     readme = f.read()
 
+with open('requirements.txt') as f:
+    required = f.read().splitlines()
+
 setup(
     name='qa',
     version='0.0.1',
@@ -16,18 +19,5 @@ setup(
     packages=find_packages(exclude=(
         'examples',
     )),
-    install_requires=[
-        'numpy==1.13.3',
-        'pillow>=6.2.0'
-        'Keras==2.1.5',
-        'tensorflow-gpu==1.7.0',
-        'tensorflow-tensorboard==0.4.0rc3',
-        'h5py==2.7.1',
-        'spacy==2.0.3',
-        'scikit-learn==0.19.1',
-        'sacred==0.7.2',
-        'pandas==0.22.0',
-        'nltk>=3.4.5'
-
-    ]
+    install_requires=required
 )
