@@ -24,7 +24,7 @@ setup(
         'tensorflow-tensorboard==0.4.0rc3',
         'h5py==2.7.1',
         'spacy==2.0.3',
-        'nltk==3.2.5',
+        'nltk==3.6.3',
         'scikit-learn==0.19.1',
         'sacred==0.7.2',
         'pandas==0.22.0',
