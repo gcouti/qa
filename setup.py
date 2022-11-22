@@ -18,7 +18,7 @@ setup(
     )),
     install_requires=[
         'numpy==1.13.3',
-        'Pillow==4.3.0',
+        'Pillow==9.3.0',
         'Keras==2.1.5',
         'tensorflow-gpu==1.7.0',
         'tensorflow-tensorboard==0.4.0rc3',
